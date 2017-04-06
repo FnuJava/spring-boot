@@ -26,6 +26,17 @@ public class Result implements Serializable{
 		this.data = data;
 		this.timeMills = System.currentTimeMillis();
 	}
+	
+	/**
+	 * 默认ok构造
+	 * @param data
+	 */
+	public Result(Object data){
+		this.ret = Result.OK;
+		this.msg = null;
+		this.data = data;
+		this.timeMills = System.currentTimeMillis();
+	}
 	/**
 	 * 获取客户端错误Result
 	 * @param data

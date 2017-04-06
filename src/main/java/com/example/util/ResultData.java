@@ -17,6 +17,15 @@ public class ResultData implements Serializable{
 		this.msg = msg;
 		this.info = info;
 	}
+	/**
+	 * 默认成功构造
+	 * @param info
+	 */
+	public ResultData(Object info) {
+		this.code = ResultCode.c_00000.name();
+		this.msg = ResultCode.c_00000.desc();
+		this.info = info;
+	}
 	
 	public String getCode() {
 		return code;
