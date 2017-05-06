@@ -10,7 +10,7 @@ public class Application {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
-		int fdf=2;
+		int fcf=2;
 		System.out.println(1);
 	}
 	
