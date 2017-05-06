@@ -30,6 +30,7 @@ import com.example.httpclient.common.HttpConfig;
 import com.example.httpclient.common.HttpMethods;
 import com.example.httpclient.common.Utils;
 import com.example.httpclient.exception.HttpProcessException;
+import com.example.util.RSAUtils;
 
 /**
  * 使用HttpClient模拟发送（http/https）请求
@@ -451,7 +452,7 @@ public class HttpClientUtil{
 		try {
 			if (resp.getEntity() != null) {
 				// 按指定编码转换结果实体为String类型
-				body = EntityUtils.toString(resp.getEntity(), encoding);
+				body = RSAUtils.getInstance().encrypt(EntityUtils.toString(resp.getEntity(), encoding));
 				Utils.info(body);
 			}else{//有可能是head请求
 				body =resp.getStatusLine().toString();
